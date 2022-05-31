@@ -41,6 +41,11 @@ public class ListAdapter extends RecyclerView.Adapter<ListAdapter.ViewHolder> {
         return list.size();
     }
 
+    public void filterList(ArrayList<ItemModel> searchList) {
+        list = searchList;
+        notifyDataSetChanged();
+    }
+
     public class ViewHolder extends RecyclerView.ViewHolder {
         private TextView tvPersonContNo, tvPersonName;
 
